@@ -1,16 +1,12 @@
+import turtle
 import pandas
 
+screen=turtle.Screen()
+screen.title("U.S. States")
+image="blank_states_img.gif"
+screen.addshape(image)
+turtle.shape(image)
 
-# with open('weather_data.csv') as data:
-#     data=csv.reader(data)
-#     temperatures=[]
-#     for row in data:
-#         if row[1]!="temp":
-#             temperatures.append(int(row[1]))
-    
+answer_state=screen.textinput(title="Guess the state", prompt="whats anothers state's name?")
 
-data=pandas.read_csv("weather_data.csv")
-data_dict=data.to_dict()
-temp_list=data['temp'].to_list()
-print(data["temp"].mean())
-print(data["temp"].max())
+
